@@ -21,14 +21,12 @@
         font-family: 'Nanum Gothic', sans-serif;
     }
 
-    .logo h1{
-            font-weight: 900;
-            animation: logo 5s infinite;
-        }
-
-        .logo a{
+    .logo {
             text-decoration: none;
             color: #444444;
+            font-weight: 900;
+            animation: logo 5s infinite;
+            font-size: 32px;
         }
 
         @keyframes logo {
@@ -38,34 +36,6 @@
             100%{color: #444444;}
         }
 
-         .nav{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            
-            height: 80px;
-            padding-left: 72px;
-            padding-right: 72px;
-        }
-
-        .nav a:nth-child(2){
-            color: #f9003b;
-            font-weight: bold;
-        }
-
-        .nav a:hover{
-            color: #f9003b;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-
-        .menu a{
-            text-decoration: none;
-            color: #444444;
-
-            padding-left: 64px;
-        }
 
         .ad{
             height: 50px;
@@ -368,45 +338,129 @@
             transition: all 0.3s ease;
             box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.1);
         }
+
+        .menu ul{
+            margin: 0;
+            padding: 0;
+            list-style: none; 
+        }
+
+        .menu a{
+            display: block;
+            padding: 15px;
+            color: #444444;
+            text-decoration: none;
+        }
+
+        .menu a:hover{
+            background-color: #f9003b;
+            color: #fff;
+
+            transition: all 0.3s ease;
+        }
+
+        .headC{
+            margin-right: 10px;
+            padding: 0;
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 42px;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        .headC:hover{
+            opacity: 0.3;
+        }
+
+        @media (min-width : 768px){
+            .nav{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 1400px;
+                margin-left: auto;
+                margin-right: auto
+            }
+
+            .nav ul{
+                display: flex;
+            }
+
+            .headC{
+                display: none;
+            }
+
+            .menu{
+                display: block !important;
+            }
+        }
+
+        @media (max-width: 769px){
+            .nav2{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+            }
+
+            .menu{
+                display: none;
+            }
+
+            .item{
+                margin-left: 100px;
+            }
+        }
+
         
         
     </style>
 
+<script type="text/javascript">
+    (function(w, d, a){
+        w.__beusablerumclient__ = {
+            load : function(src){
+                var b = d.createElement("script");
+                b.src = src; b.async=true; b.type = "text/javascript";
+                d.getElementsByTagName("head")[0].appendChild(b);
+            }
+        };w.__beusablerumclient__.load(a + "?url=" + encodeURIComponent(d.URL));
+    })(window, document, "//rum.beusable.net/load/b231213e201524u771");
+    </script>
+
+<script src="https://use.fontawesome.com/926fe18a63.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    $(function(){
+        $(".headC").click(function(){
+            $(".menu").slideToggle();
+        });
+    });
+</script>
+
+
 </head>
 
-    <script type="text/javascript">
-(function(w, d, a){
-    w.__beusablerumclient__ = {
-        load : function(src){
-            var b = d.createElement("script");
-            b.src = src; b.async=true; b.type = "text/javascript";
-            d.getElementsByTagName("head")[0].appendChild(b);
-        }
-    };w.__beusablerumclient__.load(a + "?url=" + encodeURIComponent(d.URL));
-})(window, document, "//rum.beusable.net/load/b231213e201524u771");
-</script>
-
-    <script type="text/javascript">
-(function(w, d, a){
-    w.__beusablerumclient__ = {
-        load : function(src){
-            var b = d.createElement("script");
-            b.src = src; b.async=true; b.type = "text/javascript";
-            d.getElementsByTagName("head")[0].appendChild(b);
-        }
-    };w.__beusablerumclient__.load(a + "?url=" + encodeURIComponent(d.URL));
-})(window, document, "//rum.beusable.net/load/b231213e201524u771");
-</script>
-    
 <body>
 
     <div class="nav">
-        <div class="logo"><a href="index.html"><h1>SOLT</h1></a></div>
+    <div class="nav2">
+        <a class="logo" href="index.html">SOLT</a>
+
+        <button type="button" class="headC">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </div>
+
         <div class="menu">
-            <a href="index.html">Best 여행지</a>
-            <a href="국내.html">국내 여행지</a>
-            <a href="해외.html">해외 여행지</a>
-            <a href="AboutUs.html">About</a>
+            <ul>
+                <li><a href="index.html">BEST여행지</a></li>
+                <li><a href="국내.html">국내 여행지</a></li>
+                <li><a href="해외.html">해외 여행지</a></li>
+                <li><a href="AboutUs.html">SOLT</a></li>
+            </ul>
         </div>
     </div>
 
